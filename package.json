@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "ts-vue-plugin": "^0.2.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.3",
+    "vue": "^2.6.6",
+    "vue-property-decorator": "^7.3.0"
+  },
+  "devDependencies": {
+    "vue-template-compiler": "^2.6.6"
+  }
+}
