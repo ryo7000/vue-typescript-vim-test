@@ -1,8 +1,8 @@
 # vue-typescript-vim-test
 
-Exec `node_modules/.bin/tsserver` and input following for open src/app.vue.
+Exec following for open src/app.vue.
 ```
-{"seq":null,"arguments":{"file":"<full path of src/app.vue>"},"type":"request","command":"open"}
+node -e "console.log(JSON.stringify({seq: null, arguments: {file: require('path').resolve('src/app.vue')},type: 'request', command: 'open'}))" | node_modules/.bin/tsserver
 ```
 
 tsserver returns with no error.
@@ -12,7 +12,7 @@ tsserver returns with no error.
 
 But open src/app2.vue with following.
 ```
-{"seq":null,"arguments":{"file":"<full path of src/app2.vue>"},"type":"request","command":"open"}
+node -e "console.log(JSON.stringify({seq: null, arguments: {file: require('path').resolve('src/app2.vue')},type: 'request', command: 'open'}))" | node_modules/.bin/tsserver
 ```
 tsserver returns error TS1219.
 
